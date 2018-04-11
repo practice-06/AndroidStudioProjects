@@ -5,19 +5,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_bright"
+    android:orientation="vertical"
     tools:context="com.example.palmdigital.chooseyourownadventurev01.MainActivity">
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:text=" Choose Your Own Adventurev01"
         android:textAlignment="center"
         android:textSize="25sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="0" />
+
+    <TextView
+        android:id="@+id/tvStoryMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="One morning the Tortoise woke up in a dream."
+        android:textAlignment="viewStart"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="0" />
+
+    <TextView
+        android:id="@+id/tvQuestionMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text=" Do you want to 'wake up' or 'explore' the dream?"
+        android:textAlignment="viewStart"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/leftButtonWakeUp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="wake up" />
+
+        <Button
+            android:id="@+id/rightButtonExplore"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text=" explore" />
+    </LinearLayout>
 
 </LinearLayout>

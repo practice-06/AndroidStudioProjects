@@ -6,31 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class BackyardActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_backyard);
 
-        Button wakeUpObject = findViewById(R.id.leftButtonWakeUp);
-        wakeUpObject.setOnClickListener(this);
-        Button exploreObject = findViewById(R.id.rightButtonExplore);
-        exploreObject.setOnClickListener(this);
+        Button ScreamObject = findViewById(R.id.LeftScream);
+        ScreamObject.setOnClickListener(this);
+        Button  FainObject= findViewById(R.id.RightFaint);
+        FainObject.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view)
     {
-        if (view.getId() == R.id.leftButtonWakeUp)
+        if (view.getId() == R.id.RightFaint)
         {
             Intent i = new Intent(this, WakeUpActivity.class);
             startActivity(i);
         }
-        if (view.getId() == R.id.rightButtonExplore)
+        if (view.getId() == R.id.LeftScream)
         {
-            Intent i = new Intent(this, ExploreActivity.class);
+            Intent i = new Intent(this, ScreamActivity.class);
             startActivity(i);
         }
     }

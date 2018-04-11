@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class ExploreActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,22 +15,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button wakeUpObject = findViewById(R.id.leftButtonWakeUp);
         wakeUpObject.setOnClickListener(this);
-        Button exploreObject = findViewById(R.id.rightButtonExplore);
-        exploreObject.setOnClickListener(this);
+        Button mainObject = findViewById(R.id.rightButtonExplore);
+        mainObject.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view)
     {
-        if (view.getId() == R.id.leftButtonWakeUp)
+        if (view.getId() == R.id.buttonLeftBackyard)
         {
-            Intent i = new Intent(this, WakeUpActivity.class);
+            Intent i = new Intent(this, BackyardActivity.class);
             startActivity(i);
         }
-        if (view.getId() == R.id.rightButtonExplore)
+        if (view.getId() == R.id.buttonRightToilet)
         {
-            Intent i = new Intent(this, ExploreActivity.class);
+            Intent i = new Intent(this, ToiletActivity.class);
             startActivity(i);
         }
     }
